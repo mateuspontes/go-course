@@ -25,7 +25,17 @@ func (s *CalculatorSuite) TestAddSuccess(c *check.C) {
 	c.Check(result, check.Equals, 52)
 }
 
-func (s *CalculatorSuite) TestAddFail(c *check.C) {
-	result := s.calculator.Add(42, 10)
+// func (s *CalculatorSuite) TestAddFail(c *check.C) {
+// 	result := s.calculator.Add(42, 10)
+// 	c.Check(result, check.Equals, 10)
+// }
+
+func (s *CalculatorSuite) TestSubtract(c *check.C) {
+	result := s.calculator.Subtract(30, 20)
 	c.Check(result, check.Equals, 10)
+}
+
+func (s *CalculatorSuite) TestMultiply(c *check.C) {
+	result := s.calculator.Multiply(3, 10)
+	c.Check(result, check.Equals, 30)
 }

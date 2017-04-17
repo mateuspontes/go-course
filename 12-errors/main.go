@@ -21,6 +21,8 @@ func doSomething() error {
 func main() {
 	err := doSomething()
 
+	fmt.Println(err)
+
 	if myError, ok := err.(*MyError); ok {
 		fmt.Println("Code of error:", myError.Code)
 		fmt.Println("Cause of error:", myError.Cause)

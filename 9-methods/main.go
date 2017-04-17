@@ -31,4 +31,7 @@ func main() {
 	person = Person{Name: "Antônio", Age: 60}
 	fmt.Println(person.String())
 
+	person = Person{Name: "Mateus", Age: 40}
+	person.Age = person.privateMethod()
+	fmt.Println(person.String())
 }

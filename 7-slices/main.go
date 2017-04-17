@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	linguagens := []string{"python", "ruby", "javascript"}
+	linguagens := make([]string, 0, 5)
+	linguagens = append(linguagens, "python", "ruby", "javascript")
 	linguagens = append(linguagens, "go")
 
 	fmt.Println("Linguagens da globo.com: ", linguagens)

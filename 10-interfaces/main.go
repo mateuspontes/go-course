@@ -18,6 +18,16 @@ func (d *Dog) Shout() string {
 	return "Rau rau!"
 }
 
+type Cat struct{}
+
+func (c *Cat) Shout() string {
+	return "Miau"
+}
+
+func callMyAnimal(a Animal) {
+	fmt.Println("My animal says:", a.Shout())
+}
+
 func main() {
 	var animal Animal
 
@@ -26,8 +36,7 @@ func main() {
 
 	animal = &Dog{}
 	callMyAnimal(animal)
-}
 
-func callMyAnimal(a Animal) {
-	fmt.Println("My animal says:", a.Shout())
+	animal = &Cat{}
+	callMyAnimal(animal)
 }
